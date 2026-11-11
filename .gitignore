@@ -1,0 +1,11 @@
+/build/
+/build-*/
+*.o
+*.obj
+*.exe
+*.out
+*.log
+__pycache__/
+.venv/
+.DS_Store
+.vscode/

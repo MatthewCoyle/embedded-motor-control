@@ -1,0 +1,56 @@
+Embedded Motor Control | deterministic host simulation | type HELP
+> SPEED 1800
+OK
+> START
+OK
+> STEP 3000
+OK advanced 3000 ms
+STATUS t=3020ms state=RUNNING direction=FWD requested=1800 rpm ramped=1800 rpm
+  output: enable=1 pwm=0.654; sensor: valid=1 speed=1764.4 rpm temp=25.3 C current=1.89 A bus=24.0 V
+  latched_faults=NONE
+  fault_history=NONE; estop_asserted=0
+> INJECT JAM ON
+OK injection updated; advance STEP to sample it
+> STEP 3500
+OK advanced 3500 ms
+STATUS t=6520ms state=FAULT direction=FWD requested=1800 rpm ramped=0 rpm
+  output: enable=0 pwm=0.000; sensor: valid=1 speed=0.0 rpm temp=26.6 C current=0.00 A bus=24.0 V
+  latched_faults=STALL
+  fault_history=STALL; estop_asserted=0
+> STATUS
+STATUS t=6520ms state=FAULT direction=FWD requested=1800 rpm ramped=0 rpm
+  output: enable=0 pwm=0.000; sensor: valid=1 speed=0.0 rpm temp=26.6 C current=0.00 A bus=24.0 V
+  latched_faults=STALL
+  fault_history=STALL; estop_asserted=0
+> INJECT CLEAR
+OK injection updated; advance STEP to sample it
+> STEP 20
+OK advanced 20 ms
+STATUS t=6540ms state=FAULT direction=FWD requested=1800 rpm ramped=0 rpm
+  output: enable=0 pwm=0.000; sensor: valid=1 speed=0.0 rpm temp=26.6 C current=0.00 A bus=24.0 V
+  latched_faults=STALL
+  fault_history=STALL; estop_asserted=0
+> STEP 1200
+OK advanced 1200 ms
+STATUS t=7740ms state=FAULT direction=FWD requested=1800 rpm ramped=0 rpm
+  output: enable=0 pwm=0.000; sensor: valid=1 speed=0.0 rpm temp=26.4 C current=0.00 A bus=24.0 V
+  latched_faults=STALL
+  fault_history=STALL; estop_asserted=0
+> RESET
+OK
+> STATUS
+STATUS t=7740ms state=RECOVERY direction=FWD requested=1800 rpm ramped=0 rpm
+  output: enable=0 pwm=0.000; sensor: valid=1 speed=0.0 rpm temp=26.4 C current=0.00 A bus=24.0 V
+  latched_faults=NONE
+  fault_history=STALL; estop_asserted=0
+> STEP 1000
+OK advanced 1000 ms
+STATUS t=8740ms state=IDLE direction=FWD requested=1800 rpm ramped=0 rpm
+  output: enable=0 pwm=0.000; sensor: valid=1 speed=0.0 rpm temp=26.4 C current=0.00 A bus=24.0 V
+  latched_faults=NONE
+  fault_history=STALL; estop_asserted=0
+> STATUS
+STATUS t=8740ms state=IDLE direction=FWD requested=1800 rpm ramped=0 rpm
+  output: enable=0 pwm=0.000; sensor: valid=1 speed=0.0 rpm temp=26.4 C current=0.00 A bus=24.0 V
+  latched_faults=NONE
+  fault_history=STALL; estop_asserted=0

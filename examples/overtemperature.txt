@@ -1,0 +1,18 @@
+# Inject simulated over-temperature, clear, then wait for manual restart
+SPEED 1600
+START
+STEP 1800
+INJECT TEMP 95
+STEP 20
+STATUS
+INJECT CLEAR
+STEP 20
+STEP 1200
+RESET
+STATUS
+STEP 1000
+STATUS
+START
+STEP 1000
+STOP
+STATUS

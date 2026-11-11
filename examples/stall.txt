@@ -1,0 +1,14 @@
+# Mechanical shaft lock fault, NOT an electric-current overrun
+SPEED 1800
+START
+STEP 3000
+INJECT JAM ON
+STEP 3500
+STATUS
+INJECT CLEAR
+STEP 20
+STEP 1200
+RESET
+STATUS
+STEP 1000
+STATUS

@@ -1,0 +1,48 @@
+Built build\motor_sim.exe
+Built build\motor_tests.exe
+Built build\motor_trace.exe
+[PASS] initial state requires sensors
+[PASS] start stop and zero output
+[PASS] unsafe reading prevents start
+[PASS] speed bounds and nonfinite
+[PASS] direction locked during run
+[PASS] PWM slew limited
+[PASS] overcurrent latches outputs off
+[PASS] overtemperature faults
+[PASS] bus voltage faults
+[PASS] sensor dropout faults
+[PASS] sensor NaN and negative invalid
+[PASS] normal plant reaches commanded speed
+[PASS] mechanical jam generates stall
+[PASS] reset blocked with unsafe sensors
+[PASS] recovery and no automatic restart
+[PASS] recovery regression faults
+[PASS] ESTOP immediately disables output
+[PASS] missed periodic task causes timing fault
+[PASS] reverse requires shaft stopped
+[PASS] UART line parse and CRLF
+[PASS] UART overflow is contained
+[PASS] injections reset
+[PASS] command interface errors and recovery
+[PASS] sample and threshold boundaries
+[PASS] coasting start and invalid idle scheduling
+[PASS] sensor age and overspeed boundary
+[PASS] held ESTOP and reset hysteresis dwell
+[PASS] HAL failed acquisition inhibits output
+[PASS] binary UART rejection and exact capacity
+[PASS] malformed command values are atomic
+[PASS] threshold and nonfinite input matrix
+[PASS] load saturation antiwindup and recovery
+[PASS] stall detection throughout command range
+[PASS] unknown state and additional fault history
+RESULT: 34/34 passed
+[PASS] normal_operation (ordered states, output inhibition, final IDLE)
+[PASS] overtemperature (ordered states, output inhibition, final IDLE)
+[PASS] overcurrent (ordered states, output inhibition, final IDLE)
+[PASS] stall (ordered states, output inhibition, final IDLE)
+[PASS] sensor_failure (ordered states, output inhibition, final IDLE)
+[PASS] undervoltage (ordered states, output inhibition, final IDLE)
+[PASS] estop_recovery (ordered states, output inhibition, final IDLE)
+[PASS] overspeed (ordered states, output inhibition, final IDLE)
+[PASS] stale_sensor (ordered states, output inhibition, final IDLE)
+ALL CHECKS PASSED: 34 C tests, 9 scenarios, 626 trace rows; first fault=9800ms.

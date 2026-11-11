@@ -1,0 +1,17 @@
+# Ordinary command path with speed regulation and deliberate shutdown
+STATUS
+SPEED 1600
+DIR FWD
+START
+STEP 5000
+STATUS
+SPEED 2200
+STEP 4000
+STOP
+STEP 1200
+STATUS
+DIR REV
+START
+STEP 2500
+STOP
+STATUS
